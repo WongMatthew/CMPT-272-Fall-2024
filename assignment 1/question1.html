@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registration Form</title>
+</head>
+<body>
+    <h1>ISLAND MEDICAL CENTRE</h1>
+    <h2>Patient Registration Form: ADULT</h2>
+    <p><i>Individual patient registration forms must be completed for each adult and young person over the age of 16.
+      Please complete clearly all relevant sections of this registration form.</i></p>
+
+    <form action="processRegistrationForm.php" method="POST">
+
+      <!------- PATIENT INFO ------->
+      <table border="1" cellpadding="5">
+        <tr>
+          <th colspan="4" style="background-color: gray;">1. Patient Information</th>
+        </tr>
+
+        <tr>
+          <!------- Title ------->
+          <td>Title:</td>
+          <td>
+            <select name="title">
+              <option value="miss">Miss</option>
+              <option value="mr">Mr</option>
+              <option value="mrs">Mrs</option>
+              <option value="ms">Ms</option>
+              <option value="mstr">Mstr</option>
+              <option value="mx">Mx</option>
+            </select>
+          </td>
+          <!------- Gender Identity ------->
+          <td>Gender Identity:</td>
+          <td>
+            <input type="checkbox" name="gender_female" value="female"> Female
+            <input type="checkbox" name="gender_male" value="male"> Male
+            <input type="checkbox" name="gender_trans" value="trans"> Trans
+            <input type="checkbox" name="gender_other" value="other"> Other
+          </td>
+        </tr>
+
+        <tr>
+          <!------- Family Name ------->
+          <td>Family Name:</td>
+          <td><input type="text" name="family_name"></td>
+          <!------- Marital Status ------->
+          <td>Marital Status:</td>
+          <td>
+            <input type="checkbox" name="single" value="single"> Single
+            <input type="checkbox" name="married" value="married"> Married
+            <input type="checkbox" name="civil_partnership" value="civil_partnership"> Civil Partnership
+            <br>
+            <input type="checkbox" name="separated" value="separated"> Separated
+            <input type="checkbox" name="divorced" value="divorced"> Divorced
+            <input type="checkbox" name="other_marital" value="other_marital"> Other
+          </td>
+        </tr>
+
+        <tr>
+          <!------- Given Name ------->
+          <td>Given Name(s):</td>
+          <td><input type="text" name="given_name"></td>
+          <!------- Ethnicity ------->
+          <td>Ethnicity: Select A and B</td>
+          <td>
+            A: <input type="checkbox" name="ethnicity_white" value="white"> White
+            <input type="checkbox" name="ethnicity_black" value="black"> Black
+            <input type="checkbox" name="ethnicity_asian" value="asian"> Asian
+            <input type="checkbox" name="ethnicity_mixed" value="mixed"> Mixed
+            <input type="checkbox" name="ethnicity_other" value="ethnicity_other"> Other
+            <br>
+            B: <input type="checkbox" name="british" value="british"> British
+            <input type="checkbox" name="european" value="european"> European
+            <input type="checkbox" name="other_ethnicity" value="other_ethnicity"> Other
+          </td>
+        </tr>
+
+        <tr>
+            <!------- Known As ------->
+            <td>Known As:</td>
+            <td><input type="text" name="known_as"></td>
+            <!------- First Language ------->
+            <td>First Language: <small>if not English</small></td>
+            <td><input type="text" name="first_language"></td>
+        </tr>
+
+        <tr>
+          <!------- Prev. Family Name ------->
+          <td>Previous Family Name:</td>
+          <td><input type="text" name="previous_family_name"></td>
+          <!------- Resident Since ------->
+          <td>Resident Since: <small>Month/Year</small></td>
+          <td>
+            <input type="text" name="resident_since_month" size="4"> /
+            <input type="text" name="resident_since_year" size="4">
+          </td>
+        </tr>
+
+        <tr>
+          <!------- DOB ------->
+          <td>Date of Birth:</td>
+          <td><input type="text" name="dob"></td>
+          <!------- Resaon for Registering with the Practice ------->
+          <td rowspan="2">Reason For Registering with the Practice:</td>
+          <td rowspan="2">
+            <input type="checkbox" name="transferring_gp" value="transferring_gp"> Transferring from another Jersey GP Practice
+            <br>
+            <input type="checkbox" name="re_registering" value="re_registering"> Re-Registering with GP Practice
+            <br>
+            <input type="checkbox" name="new_resident" value="new_resident"> New Resident In Jersey
+          </td>
+        </tr>
+
+        <tr>
+          <!------- Jersey SSD No/Card ------->
+          <td>Jersey SSD No/Card:</td>
+          <td>
+            <input type="text" name="jersey_ssd" size="6"> Seen By: <input type="text" name="seen_by" size="2">
+          </td>
+        </tr>
+
+        <tr>
+          <!------- Jersey SSD HIF Status ------->
+          <td>Jersey SSD HIF Status: <br><small>(For Practice to copmlete)</small></td>
+          <td>
+            <input type="checkbox" name="hio" value="hio"> HIO
+            <input type="checkbox" name="hma" value="hma"> HMA
+            <input type="checkbox" name="private" value="private"> Private
+          </td>
+          <!------- ID Confirmed ------->
+          <td>Identification Confirmed: <br><small>(Passport / Driving License)</small></td>
+          <td>
+            <input type="checkbox" name="id_confirmed_yes" value="yes"> Yes
+            <input type="checkbox" name="id_confirmed_no" value="no"> No
+            <br>Doc. Type: <input type="text" name="doc_type_patient">
+            <br> Seen By: <input type="text" name="seen_by_id_patient">
+          </td>
+        </tr>
+      </table>
+      <br>
+
+      <!------- HOME ADDRESS AND CONTACT INFO ------->
+      <table border="1" cellpadding="5">
+        <tr>
+          <th colspan="4" style="background-color: gray;">Home Address and Contact Information <small>(For ID purposes Utility Bill/Bank Statement or Tax/SSD Notification dated within 3 months is valid)</small>
+          </th>
+        </tr>
+
+        <tr>
+          <!------- Current Home Address ------->
+          <td rowspan="4">Current Home Address (1):</td>
+          <td rowspan="4"><input type="text" name="curr_home_address"></td>
+
+          <!------- Home TElephone ------->
+          <td>Home Telephone:</td>
+          <td colspan="3"><input type="text" name="home_telephone"></td>
+        </tr>
+        
+        <tr>
+          <!------- Work Telephone ------->
+          <td>Work Telephone:</td>
+          <td colspan="3"><input type="text" name="work_telephone"></td>
+        </tr>
+
+        <tr>
+          <!------- Mobile Telephone ------->
+          <td>Mobile Telephone:</td>
+          <td colspan="3"><input type="text" name="mobile_telephone"></td>
+        </tr>
+
+        <tr>
+          <!------- Personal Email Address ------->
+          <td>Personal Email Address:</td>
+          <td colspan="3"><input type="text" name="email_address"></td>
+        </tr>
+
+        <tr>
+          <!------- Post Code ------->
+          <td>Post-Code:</td>
+          <td><input type="text" name="post_code"></td>
+
+          <!------- Address Confirmed -------> 
+          <td>Address Confirmed: <small>Dated within 3 months of issue</small></td>
+          <td>
+            <input type="checkbox" name="address_confirmed_yes" value="yes"> Yes
+            <input type="checkbox" name="address_confirmed_no" value="no"> No
+            <br>Doc. Type: <input type="text" name="doc_type_address">
+            <br> Seen By: <input type="text" name="seen_by_id_address">
+          </td>
+        </tr>
+
+        <tr>
+          <!------- Access Info ------->
+          <td colspan="1">Access Information:<br><small>for impaired patient visits</small></td>
+          <td colspan="6"><input type="text" name="access_info" size="50"></td>
+        </tr>
+      </table>
+      <br>
+
+      <!------- PREVIUOS HOME ADDRESS ------->
+      <table border="1" cellpadding="5">
+        <tr>
+          <th colspan="4" style="background-color: gray;">Previous Home Address <br><small>(If less than three years at the current home address)</small>
+          </th>
+        </tr>
+
+        <tr>
+          <!------- Prev Home Address (2) ------->
+          <td>Previous Home Address (2):</td>
+          <td><input type="text" name="prev_home_address_2"></td>
+          <!------- Prev Home Address (3) ------->
+          <td>Previous Home Address (3):</td>
+          <td><input type="text" name="prev_home_address_3"></td>
+        </tr>
+
+        <tr>
+          <!------- Date From / To ------->
+          <td>Date From / To:</td>
+          <td><input type="text" name="date_from_2" size="10"> / <input type="text" name="date_to_2" size="10"></td>
+          <!------- Date From / To ------->
+          <td>Date From / To:</td>
+          <td><input type="text" name="date_from_3" size="10"> / <input type="text" name="date_to_3" size="10"></td>
+        </tr>
+      </table>
+      <br>
+
+      <!------- EMERGENCY CONTACT/NEXT OF KIN INFORMATION ------->
+      <table border="1" cellpadding="5">
+        <tr>
+          <th colspan="4" style="background-color: gray;">Emergency Contact/Next of Kin Information</th>
+        </tr>
+
+        <tr>
+          <!------- Title ------->
+          <td>Title:</td>
+          <td>
+            <select name="title">
+              <option value="miss">Miss</option>
+              <option value="mr">Mr</option>
+              <option value="mrs">Mrs</option>
+              <option value="ms">Ms</option>
+              <option value="mstr">Mstr</option>
+              <option value="mx">Mx</option>
+            </select>
+          </td>
+          <!------- Home Address & Post Code ------->
+          <td rowspan="3">Home Address & Post-Code:
+            <br>
+            <input type="checkbox" name="same_as_section_2" value="yes"> Same as Section 2
+          </td>
+          <td rowspan="3">
+            <br>
+            <input type="text" name="home_address">
+          </td>
+        </tr>
+
+        <tr>
+          <!------- Family Name ------->
+          <td>Family Name:</td>
+          <td><input type="text" name="family_name"></td>
+        </tr>
+
+        <tr>
+          <!------- Given Name ------->
+          <td>Given Name(s):</td>
+          <td><input type="text" name="given_name"></td>
+        </tr>
+
+        <tr>
+          <!------- DOB ------->
+          <td>Date of Birth:</td>
+          <td><input type="date" name="dob"></td>
+          <!------- Home Telephone ------->
+          <td>Home Telephone:</td>
+          <td><input type="tel" name="home_telephone"></td>
+        </tr>
+
+        <tr>
+          <!------- RElationship to Patient ------->
+          <td>Relationship to Patient:</td>
+          <td><input type="text" name="relationship"></td>
+          <!------- Work Telephone ------->
+          <td>Work Telephone:</td>
+          <td><input type="tel" name="work_telephone"></td>
+        </tr>
+
+        <tr>
+          <!------- Next of Kin ------->
+          <td>Your Next of Kin:</td>
+          <td>
+            <input type="checkbox" name="next_of_kin_yes" value="yes"> Yes
+            <input type="checkbox" name="next_of_kin_no" value="no"> No
+          </td>
+          <!------- Mobile Telephone ------->
+          <td>Mobile Telephone:</td>
+          <td><input type="tel" name="mobile_telephone"></td>
+        </tr>
+
+        <tr>
+          <!------- Consent for us to Discuss Your Record ------->
+          <td>Consent for us to Discuss Your Record:</td>
+          <td>
+            <input type="checkbox" name="consent_yes" value="yes"> Yes
+            <input type="checkbox" name="consent_no" value="no"> No
+          </td>
+          <!------- Your Official Carer ------->
+          <td>Your Official Carer:</td>
+          <td>
+            <input type="checkbox" name="official_carer_yes" value="yes"> Yes
+            <input type="checkbox" name="official_carer_no" value="no"> No
+          </td>
+        </tr>
+      </table>
+      <br>
+
+      <button type="submit">Submit</button>
+      
+    </form>
+</body>
+</html>
+
+
+
