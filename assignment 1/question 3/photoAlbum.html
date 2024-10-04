@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Album</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            color: #000;
+            margin-top: 20px;
+        }
+        .album-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px;
+        }
+        .album {
+            margin: 10px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 180px;
+        }
+        .album img {
+            width: 100%;
+            height: auto;
+        }
+        .album a {
+            text-decoration: none;
+            color: #333;
+            text-align: center;
+            display: block;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .album a:hover {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Photo Albums</h1>
+    <div class="album-container">
+        <div class="album">
+            <a href="album1.html">
+                <img src="./album1 imgs/disney1.jpg" alt="disney1">
+                Disney World
+            </a>
+        </div>
+        <div class="album">
+            <a href="album2.html">
+                <img src="./album2 imgs/linus1.jpg" alt="linus1">
+                Linus Tech Tips Office
+            </a>
+        </div>
+        <div class="album">
+            <a href="album3.html">
+                <img src="./album3 imgs/pokemon1.jpg" alt="pokemon1">
+                Pokemon Cafe Tokyo
+            </a>
+        </div>
+        <div class="album">
+            <a href="album4.html">
+                <img src="./album4 imgs/gundam1.jpg" alt="gundam1">
+                Big Gundam Tokyo
+            </a>
+        </div>
+        <div class="album">
+            <a href="album5.html">
+                <img src="./album5 imgs/osaka1.jpg" alt="osaka1">
+                Osaka Streets
+            </a>
+        </div>
+    </div>
+</body>
+</html>
