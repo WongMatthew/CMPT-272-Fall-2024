@@ -1,4 +1,4 @@
-/*------------ General Page Styling -------------*/
+/*------------ General Styles (about, pokemon, travel, etc) -------------*/
 body {
   font-family: 'Lato', sans-serif;
   margin: 0;
@@ -19,8 +19,8 @@ p {
   margin: 10px 0;
 }
 
-/*------------ Navigation Bar Styling -------------*/
-nav ul {
+/*------------ Navbar Styles -------------*/
+.navbar {
   list-style-type: none;
   padding: 0;
   background-color: #34495e;
@@ -32,31 +32,31 @@ nav ul {
   z-index: 100;
 }
 
-nav ul li {
-  display: inline;
+.nav-item {
+  display: inline-block;
   margin-right: 15px;
 }
 
-nav ul li a {
+.nav-link {
   padding: 15px 20px;
   color: #ffffff;
   font-size: 1.1em;
   transition: background-color 0.3s ease;
 }
 
-nav ul li a:hover {
+.nav-link:hover {
   background-color: #2c3e50;
 }
 
 /*------------ Section Spacing -------------*/
-section {
+.section {
   margin-top: 80px;
   padding: 20px 0;
   border-bottom: 1px solid #dddddd;
 }
 
-/*------------ Hero Section -------------*/
-.hero {
+/*------------ Hero Banner -------------*/
+.hero-banner {
   background-image: url('your-hero-background.jpg'); /* Replace with any background image */
   background-size: cover;
   background-position: center;
@@ -68,7 +68,7 @@ section {
   position: relative;
 }
 
-.overlay {
+.hero-overlay {
   background: rgba(0, 0, 0, 0.5);
   padding: 30px;
   text-align: center;
@@ -90,7 +90,7 @@ section {
   padding-right: 20px;
 }
 
-.hero-image {
+.hero-picture {
   flex: 1;
   text-align: center;
 }
@@ -102,61 +102,78 @@ section {
   object-fit: cover;
 }
 
-/*------------ Main Content Section -------------*/
-main {
+/*------------ Main Container -------------*/
+.container {
   max-width: 1000px;
   margin: 100px auto 50px auto;
   padding: 0 20px;
 }
 
-/*------------ Job Experience Section -------------*/
-.job h3 {
+/*------------ Job Section -------------*/
+.job-title {
   margin-bottom: 5px;
   font-size: 1.2em;
 }
 
-.company {
+.company-name {
   font-size: 1em;
   color: #808080;
   margin-bottom: 10px;
 }
 
-.job p {
+.job-description {
   font-size: 1em;
 }
 
 /*------------ Project Section -------------*/
-.project h3 {
+.project-title {
   font-size: 1.2em;
 }
 
-.project p {
+.project-description {
   font-size: 1em;
 }
 
-/* Additional spacing for individual jobs and projects */
+/* note: extra space for projects/jobs */
 .job, .project {
   margin-bottom: 30px;
 }
 
-/*------------ Footer Section -------------*/
-footer {
+/*------------ Pokemon Gallery -------------*/
+.pokemon-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.collection-pic {
+  width: 100%;
+  max-width: 300px;
+  border: 2px solid #dddddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+/*------------ Footer Styles -------------*/
+.footer {
   background-color: #34495e;
   color: #ffffff;
   text-align: center;
   padding: 20px 0;
 }
 
-footer a {
+.footer-link {
   color: #3498db;
 }
 
-footer a:hover {
+.footer-link:hover {
   color: #2980b9;
 }
 
-/*------------ Image Styling -------------*/
-.pokemon-collection-pic {
+/*------------ Image Styles -------------*/
+.collection-pic {
   display: block;
   margin: 20px auto;
   width: 100%;
