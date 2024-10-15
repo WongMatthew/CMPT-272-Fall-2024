@@ -1,0 +1,75 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+    color: #1a1a1a;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  /* Heading Style */
+  .landing h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .landing h2 {
+    font-size: 4rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .landing nav {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .landing nav a {
+    color: #ffa500;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  
+  .landing nav a:hover {
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  /* About Section */
+  .about {
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
+    gap: 2rem;
+  }
+  
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #ffa500;
+  }
+  
+  .blurb {
+    max-width: 600px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: left;
+  }
+  
+  
+  
