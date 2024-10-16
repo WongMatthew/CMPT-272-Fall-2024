@@ -2,76 +2,75 @@
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    background-color: #f0f0f0;
-    color: #1a1a1a;
+    background-color: white;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     flex-direction: column;
-  }
-  
-  /* Content Block Styling */
-  main {
+}
+
+main {
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
     padding: 2rem;
-  }
-  
-  /* Landing Section */
-  .landing h1 {
+}
+
+/* Landing Section */
+.landing h1 {
     font-size: 5rem;
     font-weight: 400;
     margin: 0;
-  }
-  
-  .landing h2 {
+}
+
+.landing h2 {
     font-size: 3rem;
     font-weight: 400;
     margin: 0.5rem 0;
-  }
-  
-  .landing nav {
+}
+
+.landing nav {
     margin-top: 1rem;
-  }
-  
-  .landing nav a {
-    color: #ffa500;
+}
+
+.landing nav a {
+    color: orange;
     text-decoration: none;
     font-size: 1.5rem;
     margin-right: 1rem;
-  }
-  
-  .landing nav a:hover {
+}
+
+.landing nav a:hover {
     color: #333;
     transition: color 0.3s ease;
-  }
-  
-  /* About Section */
-  .about {
+}
+
+/* About Section */
+.about {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     width: 100%;
     margin-top: 3rem;
-  }
-  
-  .profile-pic {
+}
+
+.profile-pic {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 2px solid #ffa500;
+    border: 2px solid orange;
     margin-right: 2rem;
-  }
-  
-  .blurb {
+}
+
+.blurb {
     max-width: 600px;
     font-size: 1.2rem;
     line-height: 1.6;
     text-align: left;
-  }
-  
+}
+
 /* Research Funders Section */
 .funders-section {
     margin-top: 3rem;
@@ -86,7 +85,7 @@ body {
 
 .funders {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Creates two columns */
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
 }
 
@@ -106,123 +105,109 @@ body {
     object-fit: contain;
     margin-right: 1rem;
 }
-  
-  /* Footer Section */
-  footer {
+
+/* Footer Section */
+footer {
     width: 100%;
     max-width: 900px;
     text-align: center;
     margin-top: auto;
     padding: 1rem 0;
-  }
-  
-  .footer-nav {
+}
+
+.footer-nav {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
-  }
-  
-  .footer-nav a {
+}
+
+.footer-nav a {
     color: #1a1a1a;
     text-decoration: underline;
     font-size: 1.2rem;
-  }
-  
-  .footer-nav a:hover {
+}
+
+.footer-nav a:hover {
     color: #ffa500;
     text-decoration: none;
-  }
-  
-  /* Media Query for Mobile View */
-  @media (max-width: 768px) {
-    main {
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
-  
-    .landing h1 {
-      font-size: 3rem;
-    }
-  
-    .landing h2 {
-      font-size: 2rem;
-    }
-  
-    .landing nav a {
-      font-size: 1.2rem;
-    }
-  
-    .about {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-  
-    .profile-pic {
-      margin-bottom: 1rem;
-    }
-  
-    .blurb {
-      text-align: center;
-      font-size: 1rem;
-    }
-  
-    .footer-nav {
-      flex-direction: column;
-    }
-  
-    .footer-nav a {
-      margin-bottom: 0.5rem;
-    }
-  }
+}
 
-  /* Research Cards */
-  .research-cards {
+/* Media Queries - Mobile View */
+@media (max-width: 768px) {
+    main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .landing h1 {
+        font-size: 3rem;
+    }
+
+    .landing h2 {
+        font-size: 2rem;
+    }
+
+    .landing nav a {
+        font-size: 1.2rem;
+    }
+
+    .about {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-pic {
+        margin-bottom: 1rem;
+    }
+
+    .blurb {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+    }
+
+    .footer-nav a {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Research Cards */
+.research-cards {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two-column layout */
-    grid-gap: 1.5rem; /* Gap between cards */
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.5rem;
     margin-top: 2rem;
-  }
-  
-  .card {
+}
+
+.card {
     background-color: #fff;
     border: 1px solid #ccc;
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card h4 {
+}
+
+.card h4 {
     margin-top: 0;
     color: #333;
-  }
-  
-  .card ul {
+}
+
+.card ul {
     list-style: none;
     padding-left: 0;
-  }
-  
-  .card ul li {
-    margin-bottom: 0.5rem;
-  }
-  
-  /* Adjustments for Mobile */
-  @media (max-width: 768px) {
-    .research-cards {
-      grid-template-columns: 1fr; /* Single column layout on small screens */
-    }
-  }
-  
-  
-  
-  
+}
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
+.card ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Media Queries - Research Cards Adjustments for Mobile */
+@media (max-width: 768px) {
+    .research-cards {
+        grid-template-columns: 1fr;
+    }
+}
