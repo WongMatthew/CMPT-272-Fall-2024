@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 3 Q7</title>
+</head>
+<style>
+    body {
+        padding: 10px;
+    }
+
+    div {
+        margin-bottom: 10px;
+    }
+</style>
+
+<body>
+    <div>
+        <label for="number1">Enter number1:</label>
+        <input type="number" id="number1" style="width: 50px">
+    </div>
+
+    <div>
+        <label for="number2">Enter number2:</label>
+        <input type="number" id="number2" style="width: 50px;">
+    </div>
+
+    <div>
+        <button onclick="multiply()">Multiply</button>
+    </div>
+
+    <div>
+        <p id="output"></p>
+    </div>
+
+    <script>
+        function multiply() {
+            var number1 = document.getElementById("number1").value;
+            var number2 = document.getElementById("number2").value;
+            var result = number1 * number2;
+            document.getElementById("output").innerHTML = "<span style='color: blue;'>Result: " + result + "</span>";
+        }
+    </script>
+</body>
+
+</html>

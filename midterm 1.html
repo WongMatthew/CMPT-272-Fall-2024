@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midterm 1</title>
+</head>
+
+<style>
+    body {
+        padding: 10px;
+    }
+
+    div {
+        margin-bottom: 10px;
+    }
+</style>
+
+<body>
+    <div id="input-section">
+        <div>
+            <label for="number1">Enter a number:</label>
+        </div>
+        <div>
+            <input type="number" id="number1" style="width: 50px">
+        </div>
+        <div>
+            <button onclick="store()">Submit</button>
+        </div>
+    </div>
+
+    <div id="finish-section" style="display: none;">
+        <div>
+            <label for="number2">Enter another number:</label>
+        </div>
+        <div>
+            <input type="number" id="number2" style="width: 50px">
+        </div>
+        <div>
+            <button onclick="store()">Submit</button>
+            <button onclick="finish()">Finish</button>
+        </div>
+    </div>
+
+    <div>
+        <p id="output"></p>
+    </div>
+    
+    <script>
+        let numbers = [];
+
+        function store() {
+            var number = document.getElementById("number1").value;
+
+            if (number) {
+                numbers.push(number);
+                document.getElementById("number1").value = "";
+            }
+
+            document.getElementById("input-section").style.display = "none";
+            document.getElementById("finish-section").style.display = "block";
+        }
+
+        function finish() {
+            document.getElementById("output").innerHTML = "The numbers you entered are: " + numbers.join(", ");
+        }
+    </script>
+</body>
+
+</html>
