@@ -44,7 +44,6 @@ function moveCannon(step) {
   // current position
   cannon.style.left = `${cannonPosition}px`;
 
-  // Rotate the wheel based on movement direction
   rotateWheel(step);
 }
 
@@ -61,32 +60,27 @@ function rotateTurret(delta) {
 
 // SHOOT CANNONBALL
 function shootCannonball() {
-  if (cannonballFlying) return; // Prevent multiple cannonballs in flight
+  if (cannonballFlying) return;
 
-  shotSound.play(); // Play the shot sound
+  // play sound and loop until ball exits screen
+  shotSound.currentTime = 0;
+  shotSound.play();
 
-  // Get the turret's dimensions and position
+  // get turret position/size
   const turretRect = turret.getBoundingClientRect();
-  const cannonRect = cannon.getBoundingClientRect(); // For cannon's base offset
-  const turretLength = turretRect.width; // Length of the turret image
 
-  // Calculate the angle in radians (for trigonometric functions)
-  const angleInRadians = (turretAngle * Math.PI) / 180;
+  // find current angle in radians
+  const angleInRadians = (turretAngle * Math.PI) / -180;
 
-  // Calculate the cannonball's initial position at the tip of the turret
-  const xStart = turretRect.left + Math.cos(angleInRadians) * turretLength;
+  // find starting point in middle of turret image
+  const xStart = turretRect.left + turretRect.width / 2;
+  const yStart = turretRect.top + turretRect.height / 2;
 
-  const yStart =
-    turretRect.top +
-    Math.sin(angleInRadians) * turretLength +
-    turretRect.height / 2;
-
-  // Set the initial position of the cannonball
+  // starting position of cannonball
   let x = xStart;
-  let y = yStart;
-  const speed = 10; // Cannonball speed
+  let y = yStart - 20;
+  const speed = 10;
 
-  // Display the cannonball at the starting position
   cannonball.style.left = `${x}px`;
   cannonball.style.top = `${y}px`;
   cannonball.style.display = "block";
@@ -95,16 +89,19 @@ function shootCannonball() {
   // Move the cannonball in the direction of the turret's angle
   const interval = setInterval(() => {
     x += Math.cos(angleInRadians) * speed;
-    y += Math.sin(angleInRadians) * speed; // Y increases as it moves down
+    y -= Math.sin(angleInRadians) * speed; // Subtract Y since upward movement decreases Y
 
-    // Check if the cannonball is off the screen
+    // check if ball is off screen
     if (x > window.innerWidth || y < 0 || y > window.innerHeight) {
-      clearInterval(interval);
+      clearInterval(interval); // Stop the movement
       cannonballFlying = false;
-      cannonball.style.display = "none";
+      cannonball.style.display = "none"; // Hide the cannonball
+
+      // Stop and reset the shot sound
       shotSound.pause();
       shotSound.currentTime = 0;
     } else {
+      // Update the cannonball's position while it's still on screen
       cannonball.style.left = `${x}px`;
       cannonball.style.top = `${y}px`;
     }

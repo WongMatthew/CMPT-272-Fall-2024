@@ -4,13 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cannon Game</title>
+  <title>Assignment 4</title>
   <style>
-    html {
+    html body {
       position: relative;
       width: 100vw;
       height: 100vh;
       background: url('Background.jpg');
+      overflow: hidden;
       background-size: 100% 100%;
       background-repeat: no-repeat;
     }
@@ -54,6 +55,8 @@
       width: 30px;
       height: 30px;
       background-image: url('cannonball.png');
+      pointer-events: none;
+      z-index: -1;
     }
   </style>
 </head>
