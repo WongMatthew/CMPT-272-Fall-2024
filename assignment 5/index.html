@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Assignment 4</title>
+  <title>Assignment 5</title>
   <style>
     html body {
       position: relative;
@@ -58,6 +58,23 @@
       pointer-events: none;
       z-index: -1;
     }
+
+    #balloon {
+      position: absolute;
+      display: none;
+      width: 150px;
+      height: auto;
+    }
+
+    #livesBoard {
+      background-color: white;
+      width: 80px;
+    }
+
+    #scoreBoard {
+      background-color: white;
+      width: 55px;
+    }
   </style>
 </head>
 
@@ -65,12 +82,19 @@
   <p id="slider">
     Cannon Moving Speed: <input type="range" min="1" max="50" value="10">
   </p>
+
+  <p id="livesBoard">Lives left: 5</p>
+  <p id="scoreBoard">Score: 0</p>
+
   <div id="cannon">
     <img src="Carriage.png" id="carriage">
     <img src="Turret.png" id="turret">
     <img src="Wheel.png" id="wheel">
   </div>
+
   <div id="cannonball"></div>
+
+  <img src="FuGo.png" id="balloon">
 
   <audio id="shotSound" src="shot.m4a"></audio>
   <script src="script.js"></script>
