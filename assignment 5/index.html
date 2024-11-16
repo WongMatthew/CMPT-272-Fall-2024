@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Assignment 4</title>
+  <title>Assignment 5</title>
   <style>
     html body {
       position: relative;
@@ -58,6 +58,38 @@
       pointer-events: none;
       z-index: -1;
     }
+
+    #balloon {
+      position: absolute;
+      display: none;
+      width: 50px;
+      height: 80px;
+      background-image: url('FuGo.png');
+      background-size: cover;
+    }
+
+    #explosion {
+      position: absolute;
+      display: none;
+      width: 80px;
+      height: 80px;
+      background-image: url('explosion.png');
+      background-size: cover;
+    }
+
+    #scoreboard,
+    #lives {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 18px;
+      color: white;
+      z-index: 2;
+    }
+
+    #lives {
+      left: 200px;
+    }
   </style>
 </head>
 
@@ -74,6 +106,12 @@
 
   <audio id="shotSound" src="shot.m4a"></audio>
   <script src="script.js"></script>
+
+  <div id="balloon"></div>
+  <div id="explosion"></div>
+  <p id="scoreboard">Score: 0</p>
+  <p id="lives">Lives left: 5</p>
+  <audio id="explosionSound" src="explosion.m4a"></audio>
 </body>
 
 </html>
