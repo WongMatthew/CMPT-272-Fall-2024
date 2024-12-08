@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 5</title>
+  <style>
+    html body {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      background: url('Background.jpg');
+      overflow: hidden;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+
+    #cannon {
+      position: absolute;
+      bottom: 150px;
+      left: 0px;
+      width: auto;
+      height: auto;
+    }
+
+    #carriage {
+      position: absolute;
+      transform: rotate(0deg);
+      top: 40px;
+      left: 5px;
+      z-index: -1;
+    }
+
+    #turret {
+      position: absolute;
+      top: 0;
+    }
+
+    #wheel {
+      position: absolute;
+      top: 0px;
+      left: 80px;
+      z-index: 1;
+    }
+
+    #slider {
+      background-color: white;
+      width: 300px;
+    }
+
+    #cannonball {
+      position: absolute;
+      display: none;
+      width: 30px;
+      height: 30px;
+      background-image: url('cannonball.png');
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    #balloon {
+      position: absolute;
+      display: none;
+      width: 150px;
+      height: auto;
+    }
+
+    #livesBoard {
+      background-color: white;
+      width: 80px;
+    }
+
+    #scoreBoard {
+      background-color: white;
+      width: 55px;
+    }
+  </style>
+</head>
+
+<body>
+  <p id="slider">
+    Cannon Moving Speed: <input type="range" min="1" max="50" value="10">
+  </p>
+
+  <p id="livesBoard">Lives left: 5</p>
+  <p id="scoreBoard">Score: 0</p>
+
+  <div id="cannon">
+    <img src="Carriage.png" id="carriage">
+    <img src="Turret.png" id="turret">
+    <img src="Wheel.png" id="wheel">
+  </div>
+
+  <div id="cannonball"></div>
+
+  <img src="FuGo.png" id="balloon">
+
+  <audio id="shotSound" src="shot.m4a"></audio>
+  <script src="script.js"></script>
+</body>
+
+</html>
