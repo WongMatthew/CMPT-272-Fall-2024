@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q2</title>
+</head>
+
+<body>
+    <h1>Top 5 most populous cities</h1>
+    <ul id="cityList">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <script src="app.js"></script>
+    <script>
+        // Access the `cityData` variable exported from the JavaScript file
+        const cityData = [
+            { name: "Tokyo", population: 37977000 },
+            { name: "Delhi", population: 31181300 },
+            { name: "Shanghai", population: 27058480 },
+            { name: "SÃ£o Paulo", population: 22043000 },
+            { name: "Mexico City", population: 21582000 }
+        ];
+
+        const cityList = document.getElementById("cityList");
+        const listItems = cityList.querySelectorAll("li");
+
+        cityData.forEach((city, index) => {
+            const listItem = listItems[index];
+            listItem.textContent = city.name;
+            listItem.title = `Population = ${city.population.toLocaleString()}`;
+        });
+    </script>
+</body>
+
+</html>
